@@ -1,9 +1,20 @@
-public class array{
-    public static void main(String[]args){
-    int a[]={1,2,3,4,5};
-    System.out.println(a[2]);
-        System.out.println(+a[4] +a[2] +a[3] +a[0]);
+public class array {
+    public static void main(String[] args) {
+        String a[][] = {{"😊", "😊","😊", "😊", "😊"},
+                         {"😊","😊","😊" ,"😊" ,"😊" }};
+        int i,j;
+        //row 0
+        for (i = 0; i < a[0].length; i++) {
+            System.out.print(a[0][i] + " ");
+
+        }
+        //row 1
+        System.out.println(" ");
+            for( j=0;j < a[1].length;j++){
+            System.out.print(a[1][j]+" ");//[row][column]
 
 
+        }
+
+    }
 }
-}   
