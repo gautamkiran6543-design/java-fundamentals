@@ -45,7 +45,7 @@ public static class constructoroverloading {
 
     //constructor 3 two parameterized constructor
     constructoroverloading(String weight,double height) {
-        this.weight = weight;
+        this.weight = weight; //using this keyword it is used to distinguish instance variables and parameters
         this.height = height;
     }
         void set(){
