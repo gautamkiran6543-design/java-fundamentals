@@ -1,19 +1,20 @@
 import java.util.Scanner;
 public class bankingsystem {
-    private String bankholder;
+    private String bankholdername;
     private double bankbalance;
     private String accountnumber;
 
+    //constructor
     //setter
-    public void showdetails(String bankholder, double bankbalance, String accountnumber) {
-        this.bankholder = bankholder;
+    public  bankingsystem(String bankholdername, double bankbalance, String accountnumber) {
+        this.bankholdername = bankholdername;
         this.bankbalance = bankbalance;
         this.accountnumber = accountnumber;
     }
 
     //getter
     public String getbankholder() {
-        return bankholder;
+        return bankholdername;
     }
 
     public double getbankbalance() {
@@ -54,14 +55,14 @@ public class bankingsystem {
 
     public void showdetails() {
         System.out.println("-----------------");
-        System.out.println("Account holder name:" + bankholder);
+        System.out.println("Account holder name:" + bankholdername);
         System.out.println("Account number:" + accountnumber);
         System.out.println("Bankbalance:" + bankbalance);
         System.out.println("------------------");
 
     }
 
-    public static void main(String[] args) {
+    public  static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a bankholder name:");
         String name = sc.nextLine();
@@ -69,7 +70,7 @@ public class bankingsystem {
         String accountnumber = sc.nextLine();
         System.out.println("Enter a initial bank balance:");
         double bankbalance = sc.nextDouble();
-        bankingsystem obj = new bankingsystem();
+        bankingsystem obj = new bankingsystem(name,bankbalance,accountnumber);
         int choice;
         System.out.println("--------WELCOMING TO BANKING SYSTEM----------");
         System.out.println("1.Deposit");
@@ -106,6 +107,7 @@ public class bankingsystem {
 
 
         }
+        sc.close();
     }
 }
 
