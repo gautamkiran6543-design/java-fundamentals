@@ -72,41 +72,45 @@ public class bankingsystem {
         double bankbalance = sc.nextDouble();
         bankingsystem obj = new bankingsystem(name,bankbalance,accountnumber);
         int choice;
-        System.out.println("--------WELCOMING TO BANKING SYSTEM----------");
-        System.out.println("1.Deposit");
-        System.out.println("2.With Draw");
-        System.out.println("3.Check Balance");
-        System.out.println("4.Account Details");
-        System.out.println("5.Exit");
-        System.out.println("Enter a choice(1-5)");
-        choice = sc.nextInt();
-        switch (choice) {
-            case 1:
-                System.out.println("Enter a deposit amount");
-                double depositamount = sc.nextDouble();
-                obj.deposit(bankbalance);
-                break;
-            case 2:
-                System.out.println("Enter a withdraw amount");
-                double amount = sc.nextDouble();
-                obj.withdraw(amount);
-                break;
-            case 3:
-                System.out.println(" Check balance:" + obj.getbankbalance());
-                break;
-            case 4:
-                System.out.println("Account details:");
-                obj.showdetails();
-                break;
-            case 5:
-                System.out.println("Exit");
-                break;
-            default:
-                System.out.println("Invalid choice");
-                break;
+         boolean flag=true;
+         while(flag) {
+             System.out.println("--------WELCOMING TO BANKING SYSTEM----------");
+             System.out.println("1.Deposit");
+             System.out.println("2.With Draw");
+             System.out.println("3.Check Balance");
+             System.out.println("4.Account Details");
+             System.out.println("5.Exit");
+             System.out.println("Enter a choice(1-5)");
+             choice = sc.nextInt();
+             switch (choice) {
+                 case 1:
+                     System.out.println("Enter a deposit amount");
+                     double depositamount = sc.nextDouble();
+                     obj.deposit(bankbalance);
+                     break;
+                 case 2:
+                     System.out.println("Enter a withdraw amount");
+                     double amount = sc.nextDouble();
+                     obj.withdraw(amount);
+                     break;
+                 case 3:
+                     System.out.println(" Check balance:" + obj.getbankbalance());
+                     break;
+                 case 4:
+                     System.out.println("Account details:");
+                     obj.showdetails();
+                     break;
+                 case 5:
+                     System.out.println("Exit");
+                     break;
+                 default:
+                     System.out.println("Invalid choice");
+                     flag=false;
+                     break;
 
 
-        }
+             }
+         }
         sc.close();
     }
 }
