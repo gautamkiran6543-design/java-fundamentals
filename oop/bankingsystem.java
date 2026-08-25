@@ -28,7 +28,7 @@ public class bankingsystem {
     // amount deposited
     public void deposit(double amount) {
         if (amount > 0) {
-            bankbalance = bankbalance + amount;
+            bankbalance = (bankbalance + amount);
             System.out.println("Successfully Deposited");
             System.out.println("Deposited Amount:" + amount);
             System.out.println("Current balance:" + bankbalance);
@@ -86,7 +86,7 @@ public class bankingsystem {
                  case 1:
                      System.out.println("Enter a deposit amount");
                      double depositamount = sc.nextDouble();
-                     obj.deposit(bankbalance);
+                     obj.deposit(depositamount);
                      break;
                  case 2:
                      System.out.println("Enter a withdraw amount");
