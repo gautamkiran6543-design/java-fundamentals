@@ -39,10 +39,15 @@ public class animal {
 
     public  void main(String[] args) {
         animal o1;
+        o1=new animal();
+        o1.feature("Animal",100);
+        System.out.println();
         o1 = new animal1();
         o1.feature("Dog",30);
+        System.out.println();
         o1=new animal2();
         o1.feature("cat",9);
+        System.out.println();
         o1=new animal3();
         o1.feature("tiger",200);
 
