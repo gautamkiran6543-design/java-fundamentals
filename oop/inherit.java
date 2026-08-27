@@ -1,6 +1,9 @@
  public class inherit{
-void parentclass(){
-    System.out.println("this is parent class. i used method");
+String parentclass(String name) {
+    return name;
+}
+int parentclass(int age){
+   return age;
 
 }
 }
@@ -8,15 +11,12 @@ public class child extends inherit {
     void childclass()
 
     {
-        System.out.println("thus is child class. i used method as weel");
+        System.out.println("Here i inherit name and age from parent class" );
     }
 }
 public  void main(String[]args){// i didnot usw public
-    inherit o1=new inherit();
-    o1.parentclass();//calling method using object
-    child o2=new child();
-    o2.childclass();
-    o2.parentclass();
-    o2.parentclass();
-
+    child o1=new child(); // i create a object of child class
+    o1.parentclass("Dog"); // calling inherit method
+    o1.parentclass(25);
+    o1.childclass();
 }
