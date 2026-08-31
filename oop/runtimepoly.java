@@ -1,3 +1,5 @@
+//Runtime poly:Runtime polymorphism = Parent reference + Child object + Method overriding + Method selection
+// at runtime.
 public class runtimepoly {
     String name;
     String address;
@@ -16,7 +18,7 @@ public class poly extends runtimepoly{
 }
 public  void main(String[]args)
 {
-    poly  ob= new poly();
+    runtimepoly ob; //parent reference
+      ob= new poly(); //child object
     ob.show("kiran","itahari");
-    ob.show();
 }
