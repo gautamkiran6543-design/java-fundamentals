@@ -1,6 +1,6 @@
 //Runtime poly:Runtime polymorphism = Parent reference + Child object + Method overriding + Method selection
 // at runtime.
-public class runtimepoly {
+public abstract class runtimepoly {
     String name;
     String address;
     void show(String name, String address){
@@ -8,10 +8,12 @@ public class runtimepoly {
         System.out.println("address="+address);
         System.out.println("this is parent class so here i used overridr");
     }
-
 }
 public class poly extends runtimepoly{
-    void show(){
+    @Override
+    //void show() // here method and parameters should same when we use override ,overriding parent to child class
+            void show(String name,String address)
+    {
         System.out.println("this is child class");
     }
 
