@@ -1,10 +1,11 @@
+//Abstraction: it means hiding unnecessary details and show only the important part
 public class abstraction { //outer class
     abstract class animal{
+        abstract void sound();// inner class
         void details(String dog, String cat) {
             System.out.println("dog=" + dog);
             System.out.println("cat=" + cat);
         }
-            abstract void sound();
 
         }
     class animal1 extends animal{
@@ -15,7 +16,7 @@ public class abstraction { //outer class
         }
     }
     public  void main(String[]args){
-        animal1 ob=new animal1();
+        animal ob=new animal1(); //parent class refrence child class object
         ob.details("it barks","it doesnot bark it meow");
         ob.sound();
     }
