@@ -1,3 +1,19 @@
+//Interface:It is a contract or rule book. it tells class what method have ,but doenot tell it how to perform.
+// we use it becaude: to achieve abstraction.
+//(It hides the implementation and shows only what is required.)
+//to create common rules:eg payment system needs to pay method from differnt class.
+//to support polymorphism:
+//to implement multiple interface: eg class khalti implements esewa,payment.
+//Rules:create the interface, implement it, create the object and use the implements refrence.
+// extends vs implements
+// class + class
+//    → extends
+//
+//class + interface
+//    → implements
+//
+//interface + interface
+//    → extends
 public class interfaceeg {
    interface payment{
         public void pay();
@@ -20,9 +36,9 @@ public class interfaceeg {
        }
     }
     public void main(String[]args){
-       payment ob;
-       ob=new esewa();
-       ob.pay();
+       payment ob; // implements reference
+       ob=new esewa(); // this is creating the object
+       ob.pay(); //call method
        ob=new khalti();
        ob.pay();
        ob=new bank();
