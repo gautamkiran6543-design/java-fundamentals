@@ -17,8 +17,10 @@ public class arraylist {
         }
         System.out.println("stored detail successfully:");
         for(int i=0;i<names.size();i++){
-            System.out.println("Name="+names.get(i)+
+           System.out.println("Name="+names.get(i)+
             "\nAge="+age.get(i));
+           // for(String name:names){ this is called enhanced for loop or for each loop
+                //System.out.println(name);
+                }
+            }
         }
-    }
-}
