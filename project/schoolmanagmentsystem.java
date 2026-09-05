@@ -3,14 +3,14 @@ import java.util.Scanner;
 public class schoolmanagmentsystem {
     class student {
         public String name;
-        private int id;
+        private int Id;
         private int age;
         public String address;
         public String level;
 
-        public void student(String name, int id, int age, String address, String level) { //  constructor overloading
+        public  student(String name, int id, int age, String address, String level) { //  constructor overloading
             this.name = name;
-            this.id = id;
+            this.Id = id;
             this.address = address;
             this.age = age;
             this.level = level;
@@ -46,8 +46,7 @@ public class schoolmanagmentsystem {
 
     public  void main(String[]args){
         Scanner input=new Scanner(System.in);
-        ArrayList<String> names=new ArrayList<>();
-        student s1=new student();
+        ArrayList<student> students=new ArrayList<>();
         System.out.println();
         System.out.println("===SCHOOL MANAGEMENT SYSTEM===");
         System.out.println();
@@ -76,8 +75,20 @@ public class schoolmanagmentsystem {
                  String address=input.next();
                  System.out.println("Enter a level:");
                  String level=input.next();
+                 student s=new student(name,id,age,address,level);
+                 students.add(s);
+                 System.out.println("Records are Added successfully");
                  break;}
             case 2:
+                for(int i=0;i< students.size();i++){
+                    student s=students.get(i);
+                    System.out.println("Name:"+s.name);
+                    System.out.println("Id:"+s.age);
+                    System.out.println("age:"+s.age);
+                    System.out.println("Address:"+s.address);
+                    System.out.println("Level:"+s.level);
+            }
+                break;
 
 
 
