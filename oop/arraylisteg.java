@@ -14,14 +14,27 @@ public class arraylisteg {
         System.out.println("Enter a age");
         int ages=input.nextInt();
         name.add(names);
+        name.add(names);
+        age.add(ages);
         age.add(ages);
         System.out.println("Store data successfully");
         //always use index while storing data
         System.out.println(name.get(0));
+        System.out.println(name.get(1));
         System.out.println(age.get(0));
+        System.out.println(age.get(1));
         deetails("ram",34);
+        System.out.println();
 
     }
 
 
 }
+//remember this formula
+//ArrayList
+//   ↓
+//.add(value)     → STORE
+//.get(index)     → GET
+//.set(index,value) → CHANGE
+//.remove(index)  → DELETE
+//.size()         → COUNT

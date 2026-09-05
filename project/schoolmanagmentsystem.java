@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 public class schoolmanagmentsystem {
     class student {
@@ -43,8 +44,10 @@ public class schoolmanagmentsystem {
     }
 
 
-    public static void main(String[]args){
+    public  void main(String[]args){
         Scanner input=new Scanner(System.in);
+        ArrayList<String> names=new ArrayList<>();
+        student s1=new student();
         System.out.println();
         System.out.println("===SCHOOL MANAGEMENT SYSTEM===");
         System.out.println();
@@ -60,6 +63,24 @@ public class schoolmanagmentsystem {
         int choice=input.nextInt();
         switch(choice){
             case 1:
+                System.out.println("How many student do you want to store?");
+                int n=input.nextInt();
+                for(int i=0;i<n;i++){
+                System.out.println("Enter a name:");
+                 String name=input.next();
+                 System.out.println("Enter a Student Id:");
+                 int id=input.nextInt();
+                 System.out.println("Enter a age:");
+                 int age=input.nextInt();
+                 System.out.println("Enter a address:");
+                 String address=input.next();
+                 System.out.println("Enter a level:");
+                 String level=input.next();
+                 break;}
+            case 2:
+
+
+
 
         }
     }
