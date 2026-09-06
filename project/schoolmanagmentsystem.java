@@ -89,6 +89,8 @@ public class schoolmanagmentsystem {
                     System.out.println("Level:"+s.level);
             }
                 break;
+            case 3:
+
 
 
 
