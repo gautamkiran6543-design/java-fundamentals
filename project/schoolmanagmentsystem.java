@@ -8,7 +8,7 @@ public class schoolmanagmentsystem {
         public String address;
         public String level;
 
-        public  student(String name, int id, int age, String address, String level) { //  constructor overloading
+        public student(String name, int id, int age, String address, String level) { //  constructor overloading
             this.name = name;
             this.Id = id;
             this.address = address;
@@ -16,85 +16,119 @@ public class schoolmanagmentsystem {
             this.level = level;
         }
     }
-    class teacher{
-        public void setdetails(String name,String salary, int age,String address, String level, int id ){ //method
+
+    class teacher {
+        public void setdetails(String name, String salary, int age, String address, String level, int id) { //method
             System.out.println("Name=" + name);
             System.out.println("Age=" + age);
             System.out.println("Address=" + address);
             System.out.println("Level=" + level);
             System.out.println("ID=" + id);
-            System.out.println("Salary="+salary);
+            System.out.println("Salary=" + salary);
 
         }
     }
-    static void details(String name, int id, String address, String level){
-        System.out.println("Name="+name);
-        System.out.println("Address="+address);
-        System.out.println("ID="+id);
-        System.out.println("Level="+level);
+
+    static void details(String name, int id, String address, String level) {
+        System.out.println("Name=" + name);
+        System.out.println("Address=" + address);
+        System.out.println("ID=" + id);
+        System.out.println("Level=" + level);
 
     }
-    class course{
-        static void display(String subject, int id, double fee,String coursename){
-            System.out.println("Course Name="+coursename);
-            System.out.println("Sunject="+subject);
-            System.out.println("ID="+id);
-            System.out.println("Fee="+fee);
+
+    class course {
+        static void display(String subject, int id, double fee, String coursename) {
+            System.out.println("Course Name=" + coursename);
+            System.out.println("Sunject=" + subject);
+            System.out.println("ID=" + id);
+            System.out.println("Fee=" + fee);
         }
     }
 
 
-    public  void main(String[]args){
-        Scanner input=new Scanner(System.in);
-        ArrayList<student> students=new ArrayList<>();
+    public void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        ArrayList<student> students = new ArrayList<>();
         System.out.println();
-        System.out.println("===SCHOOL MANAGEMENT SYSTEM===");
-        System.out.println();
-        System.out.println("1. Add student");
-        System.out.println("2.View Students");
-        System.out.println("3.Search student");
-        System.out.println("4.Update student");
-        System.out.println("5.Delet student");
-        System.out.println("6.Add Teacher");
-        System.out.println("7.View teacher");
-        System.out.println("8.Exit");
-        System.out.println("Enter a choice(1-8)");
-        int choice=input.nextInt();
-        switch(choice){
-            case 1:
-                System.out.println("How many student do you want to store?");
-                int n=input.nextInt();
-                for(int i=0;i<n;i++){
-                System.out.println("Enter a name:");
-                 String name=input.next();
-                 System.out.println("Enter a Student Id:");
-                 int id=input.nextInt();
-                 System.out.println("Enter a age:");
-                 int age=input.nextInt();
-                 System.out.println("Enter a address:");
-                 String address=input.next();
-                 System.out.println("Enter a level:");
-                 String level=input.next();
-                 student s=new student(name,id,age,address,level);
-                 students.add(s);
-                 System.out.println("Records are Added successfully");
-                 break;}
-            case 2:
-                for(int i=0;i< students.size();i++){
-                    student s=students.get(i);
-                    System.out.println("Name:"+s.name);
-                    System.out.println("Id:"+s.age);
-                    System.out.println("age:"+s.age);
-                    System.out.println("Address:"+s.address);
-                    System.out.println("Level:"+s.level);
+        while (true) {
+            System.out.println("===SCHOOL MANAGEMENT SYSTEM===");
+            System.out.println();
+            System.out.println("1. Add student");
+            System.out.println("2.View Students");
+            System.out.println("3.Search student");
+            System.out.println("4.Update student");
+            System.out.println("5.Delet student");
+            System.out.println("6.Add Teacher");
+            System.out.println("7.View teacher");
+            System.out.println("8.Exit");
+            System.out.println("Enter a choice(1-8)");
+            int choice = input.nextInt();
+            switch (choice) {
+                case 1:
+                    System.out.println("How many student do you want to store?");
+                    int n = input.nextInt();
+                    for (int i = 0; i < n; i++) {
+                        System.out.println("Enter a name:");
+                        String name = input.next();
+                        System.out.println("Enter a Student Id:");
+                        int id = input.nextInt();
+                        System.out.println("Enter a age:");
+                        int age = input.nextInt();
+                        System.out.println("Enter a address:");
+                        String address = input.next();
+                        System.out.println("Enter a level:");
+                        String level = input.next();
+                        student s = new student(name, id, age, address, level);
+                        students.add(s);
+                        System.out.println("Records are Added successfully");
+                        break;
+                    }
+                case 2:
+                    for (int i = 0; i < students.size(); i++) {
+                        student s = students.get(i);
+                        System.out.println("Name:" + s.name);
+                        System.out.println("Id:" + s.age);
+                        System.out.println("age:" + s.age);
+                        System.out.println("Address:" + s.address);
+                        System.out.println("Level:" + s.level);
+                    }
+                    break;
+                case 3:
+
+                    System.out.println("Enter student ID to search:");
+                    int searchId = input.nextInt();
+
+                    boolean found = true;
+
+                    for (int i = 0; i < students.size(); i++) {
+
+                        student s = students.get(i);
+
+                        if (s.Id == searchId) {
+
+                            System.out.println("Student Found!");
+                            System.out.println("Name: " + s.name);
+                            System.out.println("ID: " + s.Id);
+                            System.out.println("Age: " + s.age);
+                            System.out.println("Address: " + s.address);
+                            System.out.println("Level: " + s.level);
+
+                            found = false;
+                            break;
+                        } else {
+                            System.out.println("Student not found!");
+                        }
+                    }
+
+                    if (!found) {
+                        System.out.println("Student not found!");
+                    }
+
+                    break;
+
+
             }
-                break;
-            case 3:
-
-
-
-
-
         }
     }
 }
