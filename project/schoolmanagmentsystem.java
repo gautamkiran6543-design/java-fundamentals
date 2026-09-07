@@ -99,7 +99,7 @@ public class schoolmanagmentsystem {
                     System.out.println("Enter student ID to search:");
                     int searchId = input.nextInt();
 
-                    boolean found = true;
+                    boolean found = false;
 
                     for (int i = 0; i < students.size(); i++) {
 
@@ -114,17 +114,13 @@ public class schoolmanagmentsystem {
                             System.out.println("Address: " + s.address);
                             System.out.println("Level: " + s.level);
 
-                            found = false;
+                            found = true;
                             break;
-                        } else {
-                            System.out.println("Student not found!");
                         }
                     }
-
                     if (!found) {
                         System.out.println("Student not found!");
                     }
-
                     break;
 
 
