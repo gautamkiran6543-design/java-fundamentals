@@ -20,7 +20,6 @@ public class polymorphismpayment {
     }
 
     static class bank extends polymorphismpayment {
-        @Override
         void pay() {
             System.out.println("Payment using banking system");
 
