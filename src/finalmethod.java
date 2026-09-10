@@ -6,8 +6,8 @@
         System.out.println("age="+age);
     }
     class car extends finalmethod{
-        @Override
-        void detail(String name, int age){
+        //@Override
+       // void detail(String name, int age){
             //compile error
             //cannot override a final method
             //error
@@ -21,4 +21,4 @@
 
     }
 
-}
+//}
