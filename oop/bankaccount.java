@@ -43,12 +43,13 @@ class currentaccount extends bankaccount{
 public void main(String[]args){
     currentaccount c=new currentaccount();// creating object
     savingaccount s=new savingaccount();
-    System.out.println("This");
-    c.showbalance();
+    System.out.println("This  records are currentaccount");
     c.deposit(20000.0);
     c.withdraw(5000.0);
-    s.showbalance();
+    c.showbalance();
+    System.out.println("this are savingaccount records");
     s.deposit(40000.00);
     s.withdraw(30000.00);
+    s.showbalance();
 }
 
