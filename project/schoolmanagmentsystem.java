@@ -66,9 +66,10 @@ public class schoolmanagmentsystem {
             int choice = input.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println("How many student do you want to store?");
+                    System.out.println("How many student records do you want to store?");
+                    int i=0;
                     int n = input.nextInt();
-                    for (int i = 0; i < n; i++) {
+                    while ( i < n) {
                         System.out.println("Enter a name:");
                         String name = input.next();
                         System.out.println("Enter a Student Id:");
@@ -82,10 +83,11 @@ public class schoolmanagmentsystem {
                         student s = new student(name, id, age, address, level);
                         students.add(s);
                         System.out.println("Records are Added successfully");
-                        break;
+                        i++;
                     }
+                        break;
                 case 2:
-                    for (int i = 0; i < students.size(); i++) {
+                    for ( i = 0; i < students.size(); i++) {
                         student s = students.get(i);
                         System.out.println("Name:" + s.name);
                         System.out.println("Id:" + s.age);
@@ -101,7 +103,7 @@ public class schoolmanagmentsystem {
 
                     boolean found = false;
 
-                    for (int i = 0; i < students.size(); i++) {
+                    for ( i = 0; i < students.size(); i++) {
 
                         student s = students.get(i);
 
@@ -122,6 +124,9 @@ public class schoolmanagmentsystem {
                         System.out.println("Student not found!");
                     }
                     break;
+                case 4:
+                    System.out.println("Enter a student id:");
+                    int id=input.nextInt();
 
 
             }
