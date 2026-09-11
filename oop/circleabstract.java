@@ -1,4 +1,7 @@
 
+//abstraction means hiding unnesseary details and showing what is necessary.
+//To focus on what an object does, without showing how it does it.
+//when multiple class follow same basic rule but have different implementations.
 abstract class CircleAbstract {
 
     double area;
