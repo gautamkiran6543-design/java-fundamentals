@@ -49,6 +49,7 @@ public  void main(String[]args){
     }
     System.out.println("---------------------------------");
 
+    //Update
     System.out.println("-------Enter a student id to update Data?-------");
     int searchId=input.nextInt();
     for (int i=0;i< student.size();i++){
@@ -67,6 +68,23 @@ public  void main(String[]args){
         }
         else{
             System.out.println("--------------Invalid ID----------------");
+        }
+    }
+
+    //Delet Records
+    System.out.println("-------Enter a student id to Delet from records----------");
+    searchId = input.nextInt();
+    for(int i=0;i<student.size();i++){
+        skoolmanagement s1=student.get(i);
+        if(s1.id==searchId){
+            student.remove(i); //remove the student record from arraylist
+            System.out.println("-----Successfully deleted the records------");
+            break;
+
+
+        }
+        else{
+            System.out.println("-------Invalid ID-------");
         }
     }
 
