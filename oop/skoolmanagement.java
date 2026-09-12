@@ -31,5 +31,17 @@ public  void main(String[]args){
     //add oject to arraylist
     student.add(s);
     System.out.println("Records are added successfully ✌️✌️");
+    System.out.println("-----------------------------------");
+
+
+    //this part is for storing data
+    for(int i=0;i<student.size();i++){
+        skoolmanagement s1=student.get(i); // Get the student object from the ArrayList at index i
+        System.out.println("ID:"+s1.id);
+        System.out.println("Name:"+s1.name);
+        System.out.println("Address:"+s1.address);
+        System.out.println("Level:"+s1.level);
+    }
+    System.out.println("---------------------------------");
 
 }
