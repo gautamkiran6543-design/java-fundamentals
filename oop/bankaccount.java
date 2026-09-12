@@ -1,3 +1,4 @@
+import java.util.Scanner;
 abstract  class bankaccount {//abstract class
     double balance;
     // ABSTRACTION:
@@ -56,6 +57,7 @@ class currentaccount extends bankaccount{
     }
 }
 public void main(String[]args){
+    Scanner input=new Scanner(System.in);
     currentaccount c=new currentaccount();// creating object
     savingaccount s=new savingaccount();
     System.out.println("This  records are currentaccount");

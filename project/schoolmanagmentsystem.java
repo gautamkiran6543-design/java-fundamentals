@@ -124,7 +124,7 @@ public class schoolmanagmentsystem {
                         System.out.println("Student not found!");
                     }
                     break;
-                case 4:
+                case 4://update student
                     System.out.println("Enter a student id:");
                     int id=input.nextInt();
 
