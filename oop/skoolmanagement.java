@@ -83,6 +83,13 @@ public  void main(String[]args) {
                         String address = input.next();
                         System.out.println("Enter a new level:");
                         String level = input.next();
+
+                        //Store new record
+                        //i dont need to store like student.add(s1) because
+                        s1.name=name;
+                        s1.address=address;
+                        s1.level=level;
+
                         System.out.println("---------successfully new records are Updated---------");
                         break; //stop the loop because we found the id
 
@@ -108,7 +115,14 @@ public  void main(String[]args) {
                         System.out.println("-------Invalid ID-------");
                     }
                 }
+                break;
 
+            case 5:
+            default:
+                System.out.println("Exit");
+                flag=false;
+                break;
+        }
         }
     }
-}
+
