@@ -13,18 +13,24 @@ public static void main(String[]args){
     age.add(31);
     age.add(41);
     //before update
-    System.out.println("before update");
-    System.out.println("name:"+name);
-    System.out.println("age:"+age);
+        System.out.println("before update");
+        System.out.println("name:" + name);
+        System.out.println("age:" + age);
 
     //update
-   name.set(2,"dewa");
+   name.set(2,"dewa"); // in this portion its delet the index 1 data
    age.set(2,51);
+
+    //delet
+    name.remove(1);
+    age.remove(2);
 
    //after update
     System.out.println("after update");
     System.out.println(name);
     System.out.println(age);
+
+
 
 
 
