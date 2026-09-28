@@ -40,8 +40,6 @@ public class project1 {
                 System.out.println("MODULOS IS:" + (num1 % num2));
                 break;
             case "6":
-                System.out.println("EXIT");
-                break;
             default:
                 System.out.println("Invalid choice");
         }

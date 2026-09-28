@@ -1,26 +1,53 @@
-//create a class calculate which has three function to calculate area of circle , rectangle and triangle
-// using the method overloading .
-// Also test your class using object and then explain your program.
-public class calculator{
-    double Area;
-    void rectangle(int length,int breadth){
-        Area= length*breadth;
-        System.out.println("Area of rectangle="+(Area));
+import java.util.Scanner;
+public class calculator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        boolean flag = true;
+        int choice = 0;
+        while (flag) {
 
-    }
-    void circle(float radius){
-        Area= 3.14*radius;
-        System.out.println("Area of circle="+(Area));
-    }
-    void triangle(int base,int height){
-        Area=0.5*base*height;
-        System.out.println("Area of triangle="+(Area));
-    }
-    public static void main(String[]args){
-        calculator obj= new calculator();
-        obj.circle(6);
-        obj.rectangle(5,3);
-        obj.triangle(3,6);
-    }
+            System.out.println("------------MENU---------");
+            System.out.println("1.Addition");
+            System.out.println("2.subtraction");
+            System.out.println("3.Division");
+            System.out.println("4.Multiplication");
+            System.out.println("5.Modulos");
+            System.out.println("6.Exit");
+            System.out.println("Enter a choice((1-6)");
+            choice = input.nextInt();
+            if (choice == 6) { //choice.equals(6) is only used for string so
+                flag = false;
+                continue;
+            }
 
+
+            System.out.println("enter a first number");
+            double a = input.nextDouble();
+            System.out.println("enter a second number");
+            double b = input.nextDouble();
+
+            switch (choice) {
+                case 1:
+                    System.out.println("Addition:" + (a + b));
+                    break;
+                case 2:
+                    System.out.println("SUBTRACTION IS:" + (a - b));
+                    break;
+                case 3:
+                    System.out.println("MULTIPLICATION IS:" + (a * b));
+                    break;
+                case 4:
+                    System.out.println("DIVISION IS:" + (a / b));
+                    break;
+                case 5:
+                    System.out.println("MODULOS IS:" + (a % b));
+                    break;
+                case 6:
+                default:
+                    System.out.println("Invalid choice");
+
+            }
+
+        }
+    }
 }
